@@ -1,9 +1,9 @@
 pipeline {
    agent any
    stages {
-      stage('Add platform android') {
+      stage('NPM install') {
       steps {
-         echo "Publish Android API Action"
+         sh "npm install"
       }
    }
  }
