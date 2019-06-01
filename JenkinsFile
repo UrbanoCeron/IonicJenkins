@@ -2,9 +2,15 @@ pipeline {
    agent any
      
    stages {
-      stage('NPM Setup') {
+      
+      stage('Add platform android') {
       steps {
-         sh 'npm install'
+         sh 'ionic cordova platform add android'
+      }
+
+      stage('Compile project for android') {
+      steps {
+         sh 'ionic cordova build android'
       }
    }
    
