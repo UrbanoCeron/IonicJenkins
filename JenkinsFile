@@ -11,8 +11,7 @@ pipeline {
       }
       stage('Android Build') {
          steps {
-            //sh 'ionic cordova build android'
-            sh 'ls -l /var/lib/jenkins/android-sdk'
+            sh 'ionic cordova build android'
          }
       }
    }
