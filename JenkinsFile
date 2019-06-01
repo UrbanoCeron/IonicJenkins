@@ -11,15 +11,14 @@ pipeline {
       }
       stage('Add Enviroment Android') {
          steps {
-            sh 'ANDROID_HOME=/var/lib/jenkins/android-sdk'
-            sh 'export PATH=$PATH:$ANDROID_HOME/bin'
+            sh 'ls /Users/Shared/Jenkins/Library/Android/sdk'
          }
       }
-      stage('Build Android') {
-         steps {
-            sh 'cordova telemetry on'
-            sh 'ionic cordova build android'
-         }
-      }
+      // stage('Build Android') {
+      //    steps {
+      //       sh 'cordova telemetry on'
+      //       sh 'ionic cordova build android'
+      //    }
+      // }
    }
 }
