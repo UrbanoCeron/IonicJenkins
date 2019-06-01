@@ -4,19 +4,21 @@ pipeline {
       PATH='/usr/local/bin:/usr/bin:/bin'
    }
    stages {
-      stage('NPM install') {
+      stage('NPM Install') {
          steps {
             sh 'npm install'
          }
       }
-      stage('Android Build') {
+      stage('Add Enviroment Android') {
+         steps {
+            sh 'ANDROID_HOME=/var/lib/jenkins/android-sdk'
+            sh 'export PATH=$PATH:$ANDROID_HOME/bin'
+         }
+      }
+      stage('Build Android') {
          steps {
             sh 'cordova telemetry on'
-            sh 'ANDROID_HOME=/var/lib/jenkins/android-sdk'
-            sh 'export PATH=$ANDROID_HOME/platform-tools:$PATH'
-            sh 'export PATH=$ANDROID_HOME/tools:$PATH'
-            sh 'echo $ANDROID_HOME'
-            // sh 'ionic cordova build android'
+            sh 'ionic cordova build android'
          }
       }
    }
