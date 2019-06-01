@@ -15,8 +15,8 @@ pipeline {
             sh 'ANDROID_HOME=/var/lib/jenkins/android-sdk'
             sh 'export PATH=$ANDROID_HOME/platform-tools:$PATH'
             sh 'export PATH=$ANDROID_HOME/tools:$PATH'
-            echo '$ANDROID_HOME'
-            sh 'ionic cordova build android'
+            sh 'echo $ANDROID_HOME'
+            // sh 'ionic cordova build android'
          }
       }
    }
