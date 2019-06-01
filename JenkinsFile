@@ -11,6 +11,7 @@ pipeline {
       }
       stage('Android Build') {
          steps {
+            sh 'cordova telemetry on'
             sh 'ionic cordova build android'
          }
       }
