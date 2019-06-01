@@ -9,12 +9,7 @@ pipeline {
             sh 'npm install'
          }
       }
-      stage('Add platform android') {
-         steps {
-            sh 'ionic cordova platform add android@7.1.0'
-         }
-      }
-      stage('Build app android') {
+      stage('Android Build') {
          steps {
             sh 'ionic cordova build android'
          }
