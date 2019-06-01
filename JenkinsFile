@@ -12,7 +12,7 @@ pipeline {
       stage('Android Build') {
          steps {
             //sh 'ionic cordova build android'
-            sh 'ls -l /Users/root1/Library/Android/sdk/'
+            sh 'ls -l /var/lib/jenkins/android-sdk'
          }
       }
    }
