@@ -9,16 +9,16 @@ pipeline {
             sh 'npm install'
          }
       }
-      stage('Add Enviroment Android') {
-         steps {
-            sh 'ls /Users/Shared/Jenkins/Library/Android/sdk'
-         }
-      }
-      // stage('Build Android') {
+      // stage('Add Enviroment Android') {
       //    steps {
-      //       sh 'cordova telemetry on'
-      //       sh 'ionic cordova build android'
+      //       sh 'ls /Users/Shared/Jenkins/Library/Android/sdk'
       //    }
       // }
+      stage('Build Android') {
+         steps {
+            sh 'cordova telemetry on'
+            sh 'ionic cordova build android'
+         }
+      }
    }
 }
