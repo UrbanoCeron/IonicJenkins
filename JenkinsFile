@@ -1,18 +1,10 @@
 pipeline {
    agent any
-     
    stages {
-      
       stage('Add platform android') {
       steps {
-         sh 'ionic cordova platform add android'
-      }
-
-      stage('Compile project for android') {
-      steps {
-         sh 'ionic cordova build android'
+         echo "Publish Android API Action"
       }
    }
-   
  }
 }
