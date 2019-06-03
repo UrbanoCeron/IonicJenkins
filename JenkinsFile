@@ -6,7 +6,7 @@ pipeline {
    stages {
       stage('NPM Install') {
          steps {
-            sh 'npm install'
+            cmd 'npm install'
          }
       }
       // stage('Add Enviroment Android') {
