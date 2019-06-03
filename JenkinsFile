@@ -19,7 +19,7 @@ pipeline {
             // sh 'ionic cordova platform rm android'
             // sh 'ionic cordova platform add android@7.0.0'
             // sh 'ionic cordova build android --release'
-            sh 'sudo ls -l /opt/gradle'
+            sh 'ls -l /opt/gradle'
          }
       }
    }
