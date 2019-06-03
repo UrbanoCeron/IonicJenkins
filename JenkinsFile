@@ -16,7 +16,7 @@ pipeline {
       // }
       stage('Build Android') {
          steps {
-            sh 'ionic cordova build android'
+            sh 'ionic cordova build --release android'
          }
       }
    }
