@@ -16,7 +16,6 @@ pipeline {
       // }
       stage('Build Android') {
          steps {
-            sh 'ionic cordova platform rm browser/android/io'
             sh 'ionic cordova build android'
          }
       }
